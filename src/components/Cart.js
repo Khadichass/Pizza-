@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import CardItem from "./CardItem";
 
-const Cart = () => {
+const Cart = ({ products, changeNumb }) => {
   return (
     <div>
       <div></div>
