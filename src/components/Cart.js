@@ -13,8 +13,11 @@ const Cart = ({ products, changeNumb }) => {
 
   useEffect(() => {
     let total = 0;
-    let a = 12;
-  });
+    for (var i = 0; i < products.length; i++) {
+      total += products[i].price * products[i].quantity;
+    }
+    setSum(total);
+  }, [products]);
   return (
     <div>
       <div></div>
