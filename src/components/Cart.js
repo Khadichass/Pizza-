@@ -13,6 +13,7 @@ const Cart = ({ products, changeNumb }) => {
 
   useEffect(() => {
     let total = 0;
+    let a = 12;
   });
   return (
     <div>
