@@ -53,6 +53,13 @@ const Cart = ({ products, changeNumb }) => {
                 })
               )}
             </div>
+
+            <div className="total">
+              <div className="info">
+                <p className="totalText">Total</p>
+                <p className="totalPrice">UZS:{sum.toFixed(2)}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
