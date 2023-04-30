@@ -4,7 +4,7 @@ import CardItem from "./CardItem";
 const Cart = ({ products, changeNumb }) => {
   /* Shopping card inside  */
 
-  const [classActive, toggleClass] = useState(flase);
+  const [classActive, toggleClass] = useState(false);
   const [sum, setSum] = useState(0);
 
   const toggleButton = () => {
@@ -12,6 +12,7 @@ const Cart = ({ products, changeNumb }) => {
   };
 
   useEffect(() => {
+    /* Jami summani hisoblash uchun */
     let total = 0;
     for (var i = 0; i < products.length; i++) {
       total += products[i].price * products[i].quantity;
@@ -23,9 +24,18 @@ const Cart = ({ products, changeNumb }) => {
     alert(`Subtotal:$ ${sum.toFixed(2)}`);
   };
   return (
-    <div>
-      <div></div>
-    </div>
+    <>
+      <button className="toggle-btn" onClick={toggleButton}>
+        Cart
+      </button>
+      <div className={classActive ? "active" : ""}>
+        <div className="shopping-cart">
+          <div className="cartContent">
+            <div className="cartList"></div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
