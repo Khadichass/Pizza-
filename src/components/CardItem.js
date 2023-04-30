@@ -1,34 +1,70 @@
-import React, { useState, useEffect } from "react";
-import setProducts from "./Products";
+// import React, { useState, useEffect } from "react";
 
-const CardItem = (product, changeNumb) => {
+// const CardItem = (product, changeNumb) => {
+//   return (
+//     <div className="cartItem">
+//       <img src={product.url} alt="cart-item" className="cartItemImage" />
+//       <div className="cartMain">
+//         <div>
+//           <p>{product.title}</p>
+//           <span>UZS:{product.price}</span>
+//         </div>
+//         <div>
+//           <p>
+//             Date <span>{product.quantity}</span>
+//           </p>
+
+//           <div>
+//             <button
+//               className="quantityBtn"
+//               onClick={() => {
+//                 changeNumb(product, "-");
+//               }}
+//             >
+//               -
+//             </button>
+//             <button
+//               className="quantityBtn"
+//               onClick={() => {
+//                 changeNumb(product, "+");
+//               }}
+//             >
+//               +
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default CardItem;
+
+import React from "react";
+
+const CardItem = ({ product, changeQuantity }) => {
   return (
     <div className="cartItem">
       <img src={product.url} alt="cart-item" className="cartItemImage" />
       <div className="cartMain">
         <div>
-          <p>{product.title}</p>
-          <span>UZS:{product.price}</span>
+          <p className="itemTitle">{product.title}</p>
+          <span className="cartPrice">UZS: {product.price}</span>
         </div>
         <div>
-          <p>
-            Date <span>{product.quantity}</span>
+          <p className="itemQuantity">
+            Число: <span>{product.quantity}</span>
           </p>
-
           <div>
             <button
               className="quantityBtn"
-              onClick={() => {
-                changeNumb(product, "-");
-              }}
+              onClick={() => changeQuantity(product, "-")}
             >
               -
             </button>
             <button
               className="quantityBtn"
-              onClick={() => {
-                changeNumb(product, "+");
-              }}
+              onClick={() => changeQuantity(product, "+")}
             >
               +
             </button>

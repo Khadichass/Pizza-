@@ -6,8 +6,10 @@ import Products from "./components/Products";
 import logo from "./components/logo.png";
 import filterList from "./filterList";
 
+import "./App.css";
+import "./index.css";
 function App() {
-  const [products, setProducts] = useState([1]);
+  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
@@ -16,6 +18,7 @@ function App() {
       setCart(JSON.parse(localStorage.getItem("cart")));
     }
   });
+
   const addToCart = (item) => {
     const productList = [...cart];
     if (!productList.includes(item)) {
