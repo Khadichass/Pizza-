@@ -31,7 +31,28 @@ const Cart = ({ products, changeNumb }) => {
       <div className={classActive ? "active" : ""}>
         <div className="shopping-cart">
           <div className="cartContent">
-            <div className="cartList"></div>
+            <div className="cartList">
+              {products.length === 0 ? (
+                <div className="emptyCart">
+                  <img
+                    src="https://collabkart.com/img/empty-cart.gif"
+                    className="emptyGIF"
+                  />
+                </div>
+              ) : (
+                products.map((product) => {
+                  return (
+                    <>
+                      <CardItem
+                        key={product.id}
+                        product={product}
+                        changeNumb={changeNumb}
+                      />
+                    </>
+                  );
+                })
+              )}
+            </div>
           </div>
         </div>
       </div>
