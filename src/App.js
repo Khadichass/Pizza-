@@ -7,7 +7,7 @@ import logo from "./components/logo.png";
 import filterList from "./filterList";
 
 function App() {
-  const [products, setProducts] = useState([0]);
+  const [products, setProducts] = useState([1]);
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
