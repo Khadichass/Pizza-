@@ -1,4 +1,4 @@
-import pizza from "../pizza.json";
+import pizza from "./pizza.json";
 
 export default function filterList(arr, method) {
   if (method == null) return pizza;
