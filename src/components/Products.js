@@ -2,8 +2,9 @@ import React from "react";
 
 const setProducts = (products, addToCart) => {
   return (
-    <div>
-      <div></div>
+    <div className="products">
+      <h3 className="themeText">Pizza</h3>
+      <CardList products={products} addToCart={addToCart} />
     </div>
   );
 };
