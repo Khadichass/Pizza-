@@ -59,6 +59,10 @@ const Cart = ({ products, changeNumb }) => {
                 <p className="totalText">Total</p>
                 <p className="totalPrice">UZS:{sum.toFixed(2)}</p>
               </div>
+
+              <button onClick={checkout} className="purchaseBtn">
+                Purchase
+              </button>
             </div>
           </div>
         </div>
