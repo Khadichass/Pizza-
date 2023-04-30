@@ -18,6 +18,10 @@ const Cart = ({ products, changeNumb }) => {
     }
     setSum(total);
   }, [products]);
+
+  const checkout = () => {
+    alert(`Subtotal:$ ${sum.toFixed(2)}`);
+  };
   return (
     <div>
       <div></div>
