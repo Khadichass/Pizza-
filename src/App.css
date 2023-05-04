@@ -108,13 +108,11 @@ body {
   }
 } */
 
-
 .themeText {
   text-align: center;
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
 }
-
 
 .toggle-btn {
   position: absolute;
@@ -147,14 +145,6 @@ body {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.cartItem {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 2px solid green;
-  color: #fff;
-}
 .info {
   display: flex;
   justify-content: space-between;
@@ -167,7 +157,6 @@ body {
 .emptyGIF {
   width: 100%;
 }
-
 
 .cartItem > .cartMain {
   flex-grow: 1;
@@ -215,7 +204,6 @@ body {
   color: #fff;
 }
 
-
 .cartList {
   overflow-y: auto;
   height: 68vh;
@@ -230,7 +218,6 @@ body {
 .cartList::-webkit-scrollbar-thumb {
   background-color: #ff0000;
 }
-
 
 .card-list {
   display: grid;
